@@ -71,4 +71,5 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.y < 0)
             rb.velocity = Vector2.up * 0.3f;
     }
+
 }

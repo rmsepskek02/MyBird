@@ -16,10 +16,8 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        Debug.Log("TIME = " + time);
         if(time > 3.0f)
         {
-            Debug.Log("pipe");
             GameObject pipeGo = Instantiate(pipe, transform);
             time = 0;
         }
