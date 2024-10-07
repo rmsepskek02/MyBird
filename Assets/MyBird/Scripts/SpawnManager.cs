@@ -14,6 +14,7 @@ namespace MyBird
 
         [SerializeField] private float maxSpawnTimer = 1.05f;
         [SerializeField] private float minSpawnTimer = 0.95f;
+        public static float levelTime = 0;
 
 
         //스폰 위치
@@ -40,7 +41,7 @@ namespace MyBird
                 SpawnPipe();
 
                 //타이머 초기화
-                countdown = Random.Range(minSpawnTimer, maxSpawnTimer);
+                countdown = Random.Range(minSpawnTimer, maxSpawnTimer - levelTime);
             }
             countdown -= Time.deltaTime;
         }
